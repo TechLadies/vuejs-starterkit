@@ -20,7 +20,7 @@ export default {
     cartItemNumber() {
       return this.$store.getters.cartItemNumber
     }
-  }
+  },
 }
 </script>
 
