@@ -13,7 +13,8 @@ export default new Vuex.Store({
     ],
     carts: [
       { id: 'p1', title: 'Gaming Mouse', price: 29.99, quantity: 1 },
-    ]
+    ],
+    token: '',
   },
   actions: {
     addToCart({ commit }, product) {
@@ -24,6 +25,9 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    setToken(state, token) {
+      state.token = token
+    },
     ADD_PRODUCT_TO_CART(state, product) {
       const carts = [...state.carts]
       const index = carts.findIndex(cart => cart.id === product.id)
