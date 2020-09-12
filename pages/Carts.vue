@@ -13,17 +13,24 @@
 import Cart from './Cart.vue'
 
 export default {
-   name: 'Carts',
-   components: {
+  name: 'Carts',
+  components: {
     Cart
-   },
-   data () {
-     return {
-       carts: [
-        { id: 'p1', title: 'Gaming Mouse', price: 29.99, quantity: 1 },
-      ]
-     }
-   }
+  },
+  computed: {
+    carts() {
+      return this.$store.getters.carts
+    }
+  },
+  // created () {
+  //   console.log('created')
+  // },
+  // mounted () {
+  //   console.log('mounted')
+  // },
+  // beforeDestroy () {
+  //   console.log('beforeDestroy')
+  // }
 }
 </script>
 

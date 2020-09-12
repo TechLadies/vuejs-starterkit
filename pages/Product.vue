@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     addToCart() {
-      console.log('addToCart')
+      this.$store.dispatch('addToCart', this.product)
     }
   }
 }

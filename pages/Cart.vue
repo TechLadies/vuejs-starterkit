@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     removeFromCart() {
-      console.log('removeFromCart')
+      this.$store.dispatch('removeFromCart', this.product)
     }
   }
 }
