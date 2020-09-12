@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     removeFromCart() {
-      this.$store.dispatch('removeFromCart', this.product)
     }
   }
 }

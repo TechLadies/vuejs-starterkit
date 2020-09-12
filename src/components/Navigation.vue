@@ -3,10 +3,10 @@
     <nav>
       <ul>
         <li>
-          <router-link to="/" exact>Products</router-link>
+          <a>Products</a>
         </li>
         <li>
-          <router-link to="/carts">Carts ({{ cartItemNumber }})</router-link>
+          <a>Carts</a>
         </li>
       </ul>
     </nav>
@@ -16,11 +16,6 @@
 <script>
 export default {
   name: 'Navigation',
-  computed: {
-    cartItemNumber() {
-      return this.$store.getters.cartItemNumber
-    }
-  }
 }
 </script>
 

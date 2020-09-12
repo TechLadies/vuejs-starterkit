@@ -1,17 +1,22 @@
 <template>
   <div>
     <Navigation />
-    <router-view></router-view>
+    <Products />
+    <Carts />
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue'
+import Products from './pages/Products.vue'
+import Carts from './pages/Carts.vue'
 
 export default {
   name: 'App',
   components: {
-    Navigation
+    Navigation,
+    Products,
+    Carts
   }
 }
 </script>

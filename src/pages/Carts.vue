@@ -19,9 +19,11 @@ export default {
   components: {
     Cart
   },
-  computed: {
-    carts() {
-      return this.$store.getters.carts
+  data () {
+    return {
+      carts: [
+        { id: 'p1', title: 'Gaming Mouse', price: 29.99, quantity: 1 }
+      ],
     }
   }
 }
