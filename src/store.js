@@ -13,7 +13,8 @@ export default new Vuex.Store({
     ],
     carts: [
       { id: 'p1', title: 'Gaming Mouse', price: 29.99, quantity: 1 }
-    ]
+    ],
+    token: ''
   },
   mutations: {
     ADD_PRODUCT_TO_CART(state, product) {
@@ -38,6 +39,9 @@ export default new Vuex.Store({
         }
       }
       state.carts = [ ...carts ]
+    },
+    setToken(state, token) { //  directly mutate without going through action...
+      state.token = token      
     }
   },
   actions: {

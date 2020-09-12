@@ -3,10 +3,13 @@
     <nav>
       <ul>
         <li>
-          <router-link to="/" exact>Products</router-link>
+          <router-link to="/products" exact>Products</router-link>
         </li>
         <li>
           <router-link to="/carts">Carts ({{ cartItemNumber }})</router-link>
+        </li>
+        <li>
+          <a @click="logout">Logout</a>
         </li>
       </ul>
     </nav>
@@ -19,6 +22,12 @@ export default {
   computed: {
     cartItemNumber() {
       return this.$store.getters.cartItemNumber
+    }
+  },
+  methods: {
+    logout () {
+      this.$store.commit('setToken', '')
+      this.$router.push('/')
     }
   },
 }
